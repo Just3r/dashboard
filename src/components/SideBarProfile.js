@@ -10,7 +10,7 @@ class SideBarProfile extends Component {
             <img className="profile__person-image" src={profile} alt="profile"/>
         </div>
         <Link to="/dashboard" className="profile__info">
-            <div className="profile__info-name"><h4 >{this.props.name}</h4></div>
+            <span className="profile__info-name">{this.props.name}</span>
             <img className="icon" src={arrow} alt="arrow"/>
         </Link>
       </div>

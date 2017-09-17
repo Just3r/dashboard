@@ -194,9 +194,8 @@ html, body, .app-container {
     .profile__info-name {
       display: flex;
       flex: 1;
-      justify-content: center; }
-      .profile__info-name h4 {
-        margin: 0 0 0 2em; }
+      justify-content: center;
+      margin: 0 0 0 2em; }
 
 .footer {
   display: flex;
