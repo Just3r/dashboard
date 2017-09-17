@@ -6,6 +6,7 @@ class Dashboard extends Component {
     const {user} = this.props.profile
     const {selectMetricsYear} = this.props
     const {selected} = this.props.profile
+    const {location} =this.props
     const charts = {
       'blue_metric': '#2dc0d2',
       'orange_metric': '#f36c27',
@@ -17,6 +18,11 @@ class Dashboard extends Component {
     }
     return (
       <div className="dashboard" >
+        <header className="header">
+            <div className="header-title">
+              <h1>{location.pathname.slice(1)}</h1>
+            </div>
+        </header>
         <div className="dashboard__saldo">
           <div className="dashboard__saldo-item">
               <div className="item-key">saldo:</div>

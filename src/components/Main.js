@@ -13,12 +13,6 @@ class Main extends Component {
 
     return (
       <div className="main">
-        <header className="main__header">
-          <SideBarProfile  {...user}/>
-          <div className="main__header-title">
-            <h1>{location.pathname.slice(1)}</h1>
-          </div>
-        </header>
         <div className="main__container">
           <nav className="main__container-navigation">
             <SideBar user={user} location={location}/>

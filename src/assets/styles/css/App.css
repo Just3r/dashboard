@@ -8,66 +8,21 @@ body {
   font-family: Lucida, Arial, Helvetica, sans-serif;
   font-size: 14px; }
 
-.app-container {
-  display: flex;
-  align-items: stretch;
-  justify-content: center; }
-
 html, body, .app-container {
   min-height: 100%;
   display: flex;
-  flex: 1;
-  flex-direction: column; }
+  flex: 1; }
+
+.app-container {
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center; }
 
 .main {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   flex: 1; }
-  .main__header {
-    display: flex;
-    align-items: stretch;
-    justify-content: center; }
-    .main__header-title {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      text-transform: uppercase;
-      flex: 5;
-      padding: 2em; }
-    .main__header .profile {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #2d2d2e;
-      color: #FFFFFF;
-      box-sizing: border-box;
-      padding: 1.5em;
-      min-width: 240px; }
-      .main__header .profile__person {
-        display: flex;
-        margin-bottom: .5em; }
-        .main__header .profile__person-image {
-          width: 75px;
-          height: 75px;
-          border-radius: 50%; }
-      .main__header .profile__info {
-        display: flex;
-        flex: 1;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        margin-top: .5em; }
-        .main__header .profile__info .icon {
-          width: 20px;
-          height: 20px; }
-        .main__header .profile__info-name {
-          display: flex;
-          flex: 1;
-          justify-content: center; }
-          .main__header .profile__info-name h4 {
-            margin: 0 0 0 2em; }
   .main__container {
     display: flex;
     align-items: stretch;
@@ -184,50 +139,97 @@ html, body, .app-container {
           align-items: center;
           width: 80%;
           height: 50%; }
-  .main .footer {
+
+.header {
+  display: flex;
+  align-items: stretch;
+  justify-content: center; }
+  .header-title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-transform: uppercase;
+    flex: 5;
+    padding: 2em; }
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d2d2e;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 1.5em;
+  min-width: 240px; }
+  .profile__person {
+    display: flex;
+    margin-bottom: .5em; }
+    .profile__person-image {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%; }
+  .profile__info {
     display: flex;
     flex: 1;
     width: 100%;
-    padding: 2em;
-    background-color: #5f6062;
-    color: #FFFFFF;
-    box-sizing: border-box; }
-    .main .footer__links {
-      display: flex; }
-    .main .footer__links-item {
+    justify-content: center;
+    align-items: center;
+    margin-top: .5em; }
+    .profile__info .icon {
+      width: 20px;
+      height: 20px; }
+    .profile__info-name {
       display: flex;
-      flex-direction: column;
-      margin-right: 1.5em; }
-      .main .footer__links-item .items-header {
-        margin: .25em 0;
-        text-transform: uppercase; }
-      .main .footer__links-item .items-list {
-        list-style: none;
-        padding: 0;
-        margin: 0; }
-        .main .footer__links-item .items-list .item {
-          padding: .25em 0; }
-          .main .footer__links-item .items-list .item a {
-            text-decoration: none;
-            color: #FFF; }
-      .main .footer__links-item .social-icons {
-        display: flex;
-        flex: 1;
-        align-items: flex-end; }
-        .main .footer__links-item .social-icons .icon {
-          width: 30px;
-          height: 30px;
-          margin: 0 .2em; }
-    .main .footer__legal {
-      display: flex;
-      flex-direction: column;
       flex: 1;
-      justify-content: flex-end;
-      align-items: flex-end;
-      padding-bottom: 1em; }
-    .main .footer__legal-item .item-text {
+      justify-content: center; }
+      .profile__info-name h4 {
+        margin: 0 0 0 2em; }
+
+.footer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  padding: 2em;
+  background-color: #5f6062;
+  color: #FFFFFF;
+  box-sizing: border-box; }
+  .footer__links {
+    display: flex; }
+  .footer__links-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.5em; }
+    .footer__links-item .items-header {
       margin: .25em 0;
-      font-size: .8em; }
+      text-transform: uppercase; }
+    .footer__links-item .items-list {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      .footer__links-item .items-list .item {
+        padding: .25em 0; }
+        .footer__links-item .items-list .item a {
+          text-decoration: none;
+          color: #FFF; }
+    .footer__links-item .social-icons {
+      display: flex;
+      flex: 1;
+      align-items: flex-end; }
+      .footer__links-item .social-icons .icon {
+        width: 30px;
+        height: 30px;
+        margin: 0 .2em; }
+  .footer__legal {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 1em; }
+  .footer__legal-item .item-text {
+    margin: .25em 0;
+    font-size: .8em; }
 
 .plug-container {
   display: flex;
