@@ -32,45 +32,45 @@ html, body, .app-container
   &__container-section
     display: flex
     flex: 1
-    .dashboard
+.dashboard
+  display: flex
+  flex: 1
+  flex-direction: column
+  &__saldo
+    display: flex
+    padding: 1.5em 2em
+    background-color: #e7e7e8
+    max-height: 62px
+    box-sizing: border-box
+    flex: 1
+    align-items: center
+    &-item
+      display: flex
+      align-items: center
+      .item-key
+        text-transform: uppercase
+        margin-right: 0.5em
+      .item-value
+        font-size: 1.5em
+        font-weight: bold
+  &__metrics
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex: 2
+    padding: 2em
+    &-piecharts
+      display: flex
+      text
+        font-size: 2em
+    &-areachart, &-piecharts, &-barchart
       display: flex
       flex: 1
-      flex-direction: column
-      &__saldo
-        display: flex
-        padding: 1.5em 2em
-        background-color: #e7e7e8
-        max-height: 62px
-        box-sizing: border-box
-        flex: 1
-        align-items: center
-        &-item
-          display: flex
-          align-items: center
-          .item-key
-            text-transform: uppercase
-            margin-right: 0.5em
-          .item-value
-            font-size: 1.5em
-            font-weight: bold
-      &__metrics
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        flex: 2
-        padding: 2em
-        &-piecharts
-          display: flex
-          text
-            font-size: 2em
-        &-areachart, &-piecharts, &-barchart
-          display: flex
-          flex: 1
-          justify-content: center
-          align-items: center
-          width: 80%
-          height: 50%
+      justify-content: center
+      align-items: center
+      width: 80%
+      height: 50%
 
 .sidebar
   background-color: #818285
@@ -136,6 +136,8 @@ html, body, .app-container
     align-items: center
     display: flex
     font-weight: bold
+    &.saldo
+      font-size: 1.5em
   &__row-key
     flex: 1
     &.saldo
@@ -204,14 +206,14 @@ html, body, .app-container
       margin: .25em 0
       text-transform: uppercase
     .items-list
-      list-style: none
       padding: 0
       margin: 0
+      display: flex
+      flex-direction: column
       .item
         padding: .25em 0
-        a
-          text-decoration: none
-          color: #FFF
+        text-decoration: none
+        color: #FFF
     .social-icons
       display: flex
       flex: 1

@@ -11,7 +11,7 @@ class SideBarCard extends Component {
           fields && fields.map(field => 
             <div key={field} className="card__row">
               <div className={`card__row-key ${field}`}>{field}:</div>
-              <div className="card__row-value">{Number(user[field]).toLocaleString('de-DE', {style:'currency', currency: 'EUR'})}</div>
+              <div className={`card__row-value ${field}`}>{Number(user[field]).toLocaleString('de-DE', {style:'currency', currency: 'EUR'})}</div>
             </div>
           )
         }

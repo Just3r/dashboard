@@ -30,45 +30,46 @@ html, body, .app-container {
   .main__container-section {
     display: flex;
     flex: 1; }
-    .main__container-section .dashboard {
+
+.dashboard {
+  display: flex;
+  flex: 1;
+  flex-direction: column; }
+  .dashboard__saldo {
+    display: flex;
+    padding: 1.5em 2em;
+    background-color: #e7e7e8;
+    max-height: 62px;
+    box-sizing: border-box;
+    flex: 1;
+    align-items: center; }
+    .dashboard__saldo-item {
+      display: flex;
+      align-items: center; }
+      .dashboard__saldo-item .item-key {
+        text-transform: uppercase;
+        margin-right: 0.5em; }
+      .dashboard__saldo-item .item-value {
+        font-size: 1.5em;
+        font-weight: bold; }
+  .dashboard__metrics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    padding: 2em; }
+    .dashboard__metrics-piecharts {
+      display: flex; }
+      .dashboard__metrics-piecharts text {
+        font-size: 2em; }
+    .dashboard__metrics-areachart, .dashboard__metrics-piecharts, .dashboard__metrics-barchart {
       display: flex;
       flex: 1;
-      flex-direction: column; }
-      .main__container-section .dashboard__saldo {
-        display: flex;
-        padding: 1.5em 2em;
-        background-color: #e7e7e8;
-        max-height: 62px;
-        box-sizing: border-box;
-        flex: 1;
-        align-items: center; }
-        .main__container-section .dashboard__saldo-item {
-          display: flex;
-          align-items: center; }
-          .main__container-section .dashboard__saldo-item .item-key {
-            text-transform: uppercase;
-            margin-right: 0.5em; }
-          .main__container-section .dashboard__saldo-item .item-value {
-            font-size: 1.5em;
-            font-weight: bold; }
-      .main__container-section .dashboard__metrics {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex: 2;
-        padding: 2em; }
-        .main__container-section .dashboard__metrics-piecharts {
-          display: flex; }
-          .main__container-section .dashboard__metrics-piecharts text {
-            font-size: 2em; }
-        .main__container-section .dashboard__metrics-areachart, .main__container-section .dashboard__metrics-piecharts, .main__container-section .dashboard__metrics-barchart {
-          display: flex;
-          flex: 1;
-          justify-content: center;
-          align-items: center;
-          width: 80%;
-          height: 50%; }
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 50%; }
 
 .sidebar {
   background-color: #818285;
@@ -135,6 +136,8 @@ html, body, .app-container {
     align-items: center;
     display: flex;
     font-weight: bold; }
+    .card__row-value.saldo {
+      font-size: 1.5em; }
   .card__row-key {
     flex: 1; }
     .card__row-key.saldo {
@@ -205,14 +208,14 @@ html, body, .app-container {
       margin: .25em 0;
       text-transform: uppercase; }
     .footer__links-item .items-list {
-      list-style: none;
       padding: 0;
-      margin: 0; }
+      margin: 0;
+      display: flex;
+      flex-direction: column; }
       .footer__links-item .items-list .item {
-        padding: .25em 0; }
-        .footer__links-item .items-list .item a {
-          text-decoration: none;
-          color: #FFF; }
+        padding: .25em 0;
+        text-decoration: none;
+        color: #FFF; }
     .footer__links-item .social-icons {
       display: flex;
       flex: 1;

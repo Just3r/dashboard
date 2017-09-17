@@ -18,9 +18,9 @@ class Footer extends Component {
           {headers.map((link,index) => 
             <div className="footer__links-item" key={link}>
               <h3 className="items-header">{link}</h3>
-              <ul className="items-list">
-                {links[link].map(item => <li key={item} className="item"> <Link  to="/dashboard">{item}</Link> </li>)}
-              </ul>
+              <nav className="items-list">
+                {links[link].map(item => <Link to="/dashboard" key={item} className="item"> {item} </Link>)}
+              </nav>
               {index === 2 
                 ? <div className="social-icons">
                   <Link to="/dashboard"> {social.map(iconName => <img key={iconName} className="icon" src={socialIcons[iconName]} alt={iconName}/>)} </Link>
