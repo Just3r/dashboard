@@ -19,18 +19,18 @@ class SideBarMenu extends Component {
     const {location} = this.props
     return (
       <nav className="nav">
-        <li className="nav__item-action"> 
+        <Link className="nav__item-action" to="/dashboard"> 
             <img className="icon" src={plusIcon} alt={plusIcon}/>
-            <Link to="/dashboard"> {billAction} </Link>
+            <span>{billAction}</span>
             <img className="icon" src={arrow} alt={arrow}/>
-          </li>
+          </Link>
         {
           menuLinks.map(item => 
-            <li key={item} className={`nav__item ${location && location.pathname.slice(1) === item ? 'active': ''}`}> 
+            <Link to="/dashboard" key={item} className={`nav__item ${location && location.pathname.slice(1) === item ? 'active': ''}`}> 
               <img className="icon" src={iconsObject[item]} alt="link-icon"/>
-              <Link to="/dashboard"> {item} </Link>
+              <span>{item}</span>
               <img className="icon" src={arrow} alt={arrow}/>
-            </li>  
+            </Link>  
         )}
       </nav>
     )

@@ -90,13 +90,15 @@ html, body, .app-container {
       align-items: center;
       justify-content: space-between;
       padding: 1.5em;
-      margin: 0 -1em; }
+      margin: 0 -1em;
+      text-decoration: none;
+      color: inherit; }
       .sidebar .nav__item.active, .sidebar .nav__item-action.active {
         background-color: #a3a5a8; }
       .sidebar .nav__item .icon, .sidebar .nav__item-action .icon {
         width: 20px;
         height: 20px; }
-      .sidebar .nav__item a, .sidebar .nav__item-action a {
+      .sidebar .nav__item span, .sidebar .nav__item-action span {
         flex: 1;
         text-decoration: none;
         color: inherit;
