@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Link} from 'react-router'
 class Plug extends Component {
   render() {
     let styles = {
@@ -10,7 +10,9 @@ class Plug extends Component {
         width: "100%"
     }
     return (
-     <h2 style={styles}> Please, select a tab </h2>
+     <div style={styles}>
+      <Link to="/dashboard"> Go to dashboard </Link>
+     </div>
     )
   }
 };

@@ -1,48 +1,38 @@
 import React, { Component } from 'react';
-import {menuLinks, bill} from '../helpers/links'
+import { Link } from 'react-router';
+import {menuLinks, billAction} from '../helpers/links';
+import arrow from '../assets/icons/arrow.svg';
+import plusIcon from '../assets/icons/plus.svg';
+import dashboard from '../assets/icons/dashboard.svg';
+import produkte from '../assets/icons/produkte.svg';
+import kunden from '../assets/icons/kunden.svg';
+import rechnungen from '../assets/icons/rechnungen.svg';
+console.log(menuLinks)
 class SideBarMenu extends Component {
   render() {
-    let menuContainer = {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        boxSizing: "border-box",
-        backgroundColor: "#777776",
-        color: "#FFFFFF",
-        flex: "3",
-        width: "100%",
-        padding: "1em",
-        minWidth: "240px"
+    const iconsObject = {
+      dashboard,
+      produkte,
+      kunden,
+      rechnungen
     }
-
-    let menuItem = {
-      display: "flex",
-      flex: "1",
-      alignItems: "center",
-      justifyContent: "space-between",
-      margin: "0.5em 0"
-    }
-
-    let styledBill = {
-      backgroundColor: "#414140"
-    }
-    let menuParagraph = {
-      margin: "0"
-    }
+    const {location} = this.props
     return (
-      <div style={menuContainer} className="sidebarmenu">
-      <div style={menuItem}> 
-          <i>icon</i>
-          <p style={menuParagraph}>{bill}</p>
-          <i>></i>
-        </div>
-        {menuLinks.map(item => 
-        <div key={item} style={menuItem}> 
-          <i>icon</i>
-          <p style={menuParagraph}>{item}</p>
-          <i>></i>
-        </div>  )}
-      </div>
+      <ul className="list">
+        <li className="list__item-action"> 
+            <img className="icon" src={plusIcon} alt={plusIcon}/>
+            <Link to="/dashboard"> {billAction} </Link>
+            <img className="icon" src={arrow} alt={arrow}/>
+          </li>
+        {
+          menuLinks.map(item => 
+            <li key={item} className={`list__item ${location && location.pathname.slice(1) === item ? 'active': ''}`}> 
+              <img className="icon" src={iconsObject[item]} alt="link-icon"/>
+              <Link to="/dashboard"> {item} </Link>
+              <img className="icon" src={arrow} alt={arrow}/>
+            </li>  
+        )}
+      </ul>
     )
   }
 };

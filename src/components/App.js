@@ -5,7 +5,10 @@ import Main from './Main';
 
 const mapStateToProps = (state) => {
   return {
-    profile: state.profile
+    profile: {
+      user:state.profile.user,
+      selected: state.profile.selected
+    }
   }
 }
 

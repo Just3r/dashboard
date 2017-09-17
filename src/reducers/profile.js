@@ -4,9 +4,17 @@ const user = (state={}, action) => {
       console.log('started loading userData')
       break;
     case 'LOADED_USER_PROFILE':
-      return {...state,  user:action.data} 
+      let selected = []
+      selected.push(action.data.metrics[0])
+      let user = action.data
+      user.metrics = user.metrics.sort((a,b)=> a.year -b.year)
+      return {...state,  user, selected} 
     case 'LOADING_USER_PROFILE_FAILED':
       return {...state,  error:action.data} 
+    case 'UPDATE_SELECTED_METRICS':
+      let selectedMetrics = []
+      selectedMetrics.push(action.data)
+      return {...state,  selected:selectedMetrics} 
     default:
       break;
     };

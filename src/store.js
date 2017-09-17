@@ -7,7 +7,10 @@ import logger from 'redux-logger';
 import rootReducer from './reducers/index';
 
 const defaultState = {
-  profile: {}
+  profile: {
+    user:{},
+    selected:[]
+  }
 };
 
 let createStoreWithMiddleware = applyMiddleware(promisesMiddleware,promise,logger)(createStore)

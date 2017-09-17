@@ -5,6 +5,6 @@ const description = {
 };
 export const social = ['facebook','twitter', 'linkedin'];
 export const legalInfo = ['Copyright © 2017 xxx Alle Rechte vorbehalten.','Datenschutzerklärung Nutzungsbedingungen Sicherheit']
-export const bill = "neue rechnung"
-export const menuLinks = ["dashboard", "rechnungen", "produkte", "kunden"];
+export const billAction = "neue rechnung"
+export const menuLinks = ["rechnungen","dashboard","produkte", "kunden"];
 export default description;
