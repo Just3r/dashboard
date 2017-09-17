@@ -25,11 +25,11 @@ html, body, .app-container
   flex-direction: column
   align-items: stretch
   flex: 1
-  &__container
+  .layout
     display: flex
     align-items: stretch
     flex: 4
-  &__container-section
+  .content
     display: flex
     flex: 1
 .dashboard
@@ -95,7 +95,12 @@ html, body, .app-container
       margin: 0 -1em
       text-decoration: none
       color: inherit
+      opacity: 0.8
+      &:hover
+        opacity: 1
+        transition: .3s
       &.active
+        opacity: 1
         background-color: #a3a5a8
       .icon
         width: 20px
@@ -154,6 +159,7 @@ html, body, .app-container
       text-transform: uppercase
       flex: 5
       padding: 2em
+      margin: 0
 .profile
   display: flex
   flex-direction: column
@@ -175,6 +181,8 @@ html, body, .app-container
     display: flex
     flex: 1
     width: 100%
+    text-decoration: none
+    color: inherit
     justify-content: center
     align-items: center
     margin-top: .5em
@@ -205,15 +213,14 @@ html, body, .app-container
     .items-header
       margin: .25em 0
       text-transform: uppercase
-    .items-list
-      padding: 0
-      margin: 0
-      display: flex
-      flex-direction: column
-      .item
-        padding: .25em 0
-        text-decoration: none
-        color: #FFF
+    .item
+      padding: .25em 0
+      text-decoration: none
+      color: #FFF
+      opacity: 0.9
+      &:hover
+        opacity: 1
+        transition: .3s
     .social-icons
       display: flex
       flex: 1

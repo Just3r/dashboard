@@ -14,20 +14,18 @@ class Footer extends Component {
     const headers = Object.keys(links)
     return (
      <footer  className="footer">
-        <div className="footer__links">
+        <nav className="footer__links">
           {headers.map((link,index) => 
             <div className="footer__links-item" key={link}>
               <h3 className="items-header">{link}</h3>
-              <nav className="items-list">
                 {links[link].map(item => <Link to="/dashboard" key={item} className="item"> {item} </Link>)}
-              </nav>
               {index === 2 
                 ? <div className="social-icons">
                   <Link to="/dashboard"> {social.map(iconName => <img key={iconName} className="icon" src={socialIcons[iconName]} alt={iconName}/>)} </Link>
                 </div>
                 : ''}
           </div>)}
-        </div>
+        </nav>
         <div   className="footer__legal">
               {legalInfo.map(item => 
                 <div key={item}  className="footer__legal-item">

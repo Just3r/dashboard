@@ -19,9 +19,7 @@ class Dashboard extends Component {
     return (
       <div className="dashboard" >
         <header className="header">
-            <div className="header-title">
-              <h1>{location.pathname.slice(1)}</h1>
-            </div>
+          <h1 className="header-title">{location.pathname.slice(1)}</h1>
         </header>
         <div className="dashboard__saldo">
           <div className="dashboard__saldo-item">

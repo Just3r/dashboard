@@ -12,9 +12,9 @@ class Main extends Component {
 
     return (
       <div className="main">
-        <div className="main__container">
+        <div className="layout">
           <SideBar user={user} location={location}/>
-          <section className="main__container-section">
+          <section className="content">
             {React.cloneElement({...this.props}.children, {...this.props})}
           </section>
        </div>
