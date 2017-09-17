@@ -71,82 +71,6 @@ html, body, .app-container
       align-items: center
       width: 80%
       height: 50%
-
-.sidebar
-  background-color: #818285
-  color: #FFFFFF
-  .nav
-    display: flex
-    flex-direction: column
-    justify-content: center
-    box-sizing: border-box
-    flex: 3
-    width: 100%
-    padding: 0 1em
-    margin: 0
-    &__item-action
-      background-color: #4c4d4f
-    &__item, &__item-action
-      display: flex
-      flex: 1
-      align-items: center
-      justify-content: space-between
-      padding: 1.5em
-      margin: 0 -1em
-      text-decoration: none
-      color: inherit
-      opacity: 0.8
-      &:hover
-        opacity: 1
-        transition: .3s
-      &.active
-        opacity: 1
-        background-color: #a3a5a8
-      .icon
-        width: 20px
-        height: 20px
-      span
-        flex: 1
-        text-decoration: none
-        color: inherit
-        align-self: center
-        justify-content: flex-start
-        margin-left: 1em
-        font-size: 1.1em
-        text-transform: uppercase
-.card
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: stretch
-  box-sizing: border-box
-  flex: 1
-  width: 100%
-  background-color: #35bfb5
-  color: #FFF
-  padding: 1em 1.5em
-  min-width: 240px    
-  &__row
-    display: flex
-    justify-content: space-between
-    align-items: center
-    margin: .5em 0 
-    text-transform: uppercase
-    &:first-child
-      flex-direction: column
-      align-items: flex-start
-  &__row-value
-    flex: 1
-    justify-content: center
-    align-items: center
-    display: flex
-    font-weight: bold
-    &.saldo
-      font-size: 1.5em
-  &__row-key
-    flex: 1
-    &.saldo
-      margin-bottom: 1em
 .header
     display: flex
     align-items: stretch
@@ -160,6 +84,10 @@ html, body, .app-container
       flex: 5
       padding: 2em
       margin: 0
+
+.sidebar
+  background-color: #818285
+  color: #FFFFFF
 .profile
   display: flex
   flex-direction: column
@@ -194,6 +122,76 @@ html, body, .app-container
       flex: 1
       justify-content: center
       margin: 0 0 0 2em
+.nav
+  display: flex
+  flex-direction: column
+  justify-content: center
+  box-sizing: border-box
+  flex: 3
+  width: 100%
+  padding: 0 1em
+  margin: 0
+  &__item-action
+    background-color: #4c4d4f
+  &__item, &__item-action
+    display: flex
+    flex: 1
+    align-items: center
+    justify-content: space-between
+    padding: 1.5em
+    margin: 0 -1em
+    text-decoration: none
+    color: inherit
+    opacity: 0.8
+    &:hover
+      opacity: 1
+      transition: .3s
+    &.active
+      opacity: 1
+      background-color: #a3a5a8
+    .icon
+      width: 20px
+      height: 20px
+    span
+      flex: 1
+      text-decoration: none
+      color: inherit
+      align-self: center
+      justify-content: flex-start
+      margin-left: 1em
+      font-size: 1.1em
+      text-transform: uppercase
+.card
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: stretch
+  box-sizing: border-box
+  flex: 1
+  background-color: #35bfb5
+  color: #FFF
+  padding: 1em 1.5em
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: .5em 0 
+    text-transform: uppercase
+    &:first-child
+      flex-direction: column
+      align-items: flex-start
+  &__row-value
+    flex: 1
+    justify-content: center
+    align-items: center
+    display: flex
+    font-weight: bold
+    &.saldo
+      font-size: 1.5em
+  &__row-key
+    flex: 1
+    &.saldo
+      margin-bottom: 1em
 
 .footer
   display: flex
@@ -228,6 +226,9 @@ html, body, .app-container
         width: 30px
         height: 30px
         margin: 0 .2em
+        opacity: 0.8
+        &:hover
+          opacity: 1
   &__legal
     display: flex
     flex-direction: column

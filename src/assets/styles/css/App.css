@@ -71,83 +71,6 @@ html, body, .app-container {
       width: 80%;
       height: 50%; }
 
-.sidebar {
-  background-color: #818285;
-  color: #FFFFFF; }
-  .sidebar .nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-    flex: 3;
-    width: 100%;
-    padding: 0 1em;
-    margin: 0; }
-    .sidebar .nav__item-action {
-      background-color: #4c4d4f; }
-    .sidebar .nav__item, .sidebar .nav__item-action {
-      display: flex;
-      flex: 1;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.5em;
-      margin: 0 -1em;
-      text-decoration: none;
-      color: inherit;
-      opacity: 0.8; }
-      .sidebar .nav__item:hover, .sidebar .nav__item-action:hover {
-        opacity: 1;
-        transition: .3s; }
-      .sidebar .nav__item.active, .sidebar .nav__item-action.active {
-        opacity: 1;
-        background-color: #a3a5a8; }
-      .sidebar .nav__item .icon, .sidebar .nav__item-action .icon {
-        width: 20px;
-        height: 20px; }
-      .sidebar .nav__item span, .sidebar .nav__item-action span {
-        flex: 1;
-        text-decoration: none;
-        color: inherit;
-        align-self: center;
-        justify-content: flex-start;
-        margin-left: 1em;
-        font-size: 1.1em;
-        text-transform: uppercase; }
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  box-sizing: border-box;
-  flex: 1;
-  width: 100%;
-  background-color: #35bfb5;
-  color: #FFF;
-  padding: 1em 1.5em;
-  min-width: 240px; }
-  .card__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: .5em 0;
-    text-transform: uppercase; }
-    .card__row:first-child {
-      flex-direction: column;
-      align-items: flex-start; }
-  .card__row-value {
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-weight: bold; }
-    .card__row-value.saldo {
-      font-size: 1.5em; }
-  .card__row-key {
-    flex: 1; }
-    .card__row-key.saldo {
-      margin-bottom: 1em; }
-
 .header {
   display: flex;
   align-items: stretch;
@@ -161,6 +84,10 @@ html, body, .app-container {
     flex: 5;
     padding: 2em;
     margin: 0; }
+
+.sidebar {
+  background-color: #818285;
+  color: #FFFFFF; }
 
 .profile {
   display: flex;
@@ -197,6 +124,78 @@ html, body, .app-container {
       justify-content: center;
       margin: 0 0 0 2em; }
 
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  flex: 3;
+  width: 100%;
+  padding: 0 1em;
+  margin: 0; }
+  .nav__item-action {
+    background-color: #4c4d4f; }
+  .nav__item, .nav__item-action {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em;
+    margin: 0 -1em;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8; }
+    .nav__item:hover, .nav__item-action:hover {
+      opacity: 1;
+      transition: .3s; }
+    .nav__item.active, .nav__item-action.active {
+      opacity: 1;
+      background-color: #a3a5a8; }
+    .nav__item .icon, .nav__item-action .icon {
+      width: 20px;
+      height: 20px; }
+    .nav__item span, .nav__item-action span {
+      flex: 1;
+      text-decoration: none;
+      color: inherit;
+      align-self: center;
+      justify-content: flex-start;
+      margin-left: 1em;
+      font-size: 1.1em;
+      text-transform: uppercase; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  box-sizing: border-box;
+  flex: 1;
+  background-color: #35bfb5;
+  color: #FFF;
+  padding: 1em 1.5em; }
+  .card__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5em 0;
+    text-transform: uppercase; }
+    .card__row:first-child {
+      flex-direction: column;
+      align-items: flex-start; }
+  .card__row-value {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold; }
+    .card__row-value.saldo {
+      font-size: 1.5em; }
+  .card__row-key {
+    flex: 1; }
+    .card__row-key.saldo {
+      margin-bottom: 1em; }
+
 .footer {
   display: flex;
   flex: 1;
@@ -229,7 +228,10 @@ html, body, .app-container {
       .footer__links-item .social-icons .icon {
         width: 30px;
         height: 30px;
-        margin: 0 .2em; }
+        margin: 0 .2em;
+        opacity: 0.8; }
+        .footer__links-item .social-icons .icon:hover {
+          opacity: 1; }
   .footer__legal {
     display: flex;
     flex-direction: column;

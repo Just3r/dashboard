@@ -21,7 +21,7 @@ class Footer extends Component {
                 {links[link].map(item => <Link to="/dashboard" key={item} className="item"> {item} </Link>)}
               {index === 2 
                 ? <div className="social-icons">
-                  <Link to="/dashboard"> {social.map(iconName => <img key={iconName} className="icon" src={socialIcons[iconName]} alt={iconName}/>)} </Link>
+                  {social.map(iconName => <Link to="/dashboard"> <img key={iconName} className="icon" src={socialIcons[iconName]} alt={iconName}/></Link>)}
                 </div>
                 : ''}
           </div>)}
