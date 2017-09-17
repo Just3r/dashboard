@@ -13,6 +13,7 @@ body
   height: 100vh
   display: flex
   align-items: stretch
+  justify-content: center
 .main
   display: flex
   flex-direction: column
@@ -167,6 +168,17 @@ body
         align-items: center
         flex: 2
         padding: 2em
+        &-piecharts
+          display: flex
+          text
+            font-size: 2em
+        &-areachart, &-piecharts, &-barchart
+          display: flex
+          flex: 1
+          justify-content: center
+          align-items: center
+          width: 80%
+          height: 50%
   footer
     .footer
       display: flex
@@ -214,3 +226,15 @@ body
           margin: .25em 0
           font-size: .8em
 
+.plug-container
+  display: flex
+  justify-content: center
+  padding: 2em
+  background: #35bfb5
+  align-items: center
+  align-self: center
+  width: 200px
+  height: 40px
+  a
+    text-decoration: none
+    color: #FFFFFF

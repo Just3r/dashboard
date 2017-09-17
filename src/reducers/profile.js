@@ -7,7 +7,9 @@ const user = (state={}, action) => {
       let selected = []
       selected.push(action.data.metrics[0])
       let user = action.data
-      user.metrics = user.metrics.sort((a,b)=> a.year -b.year)
+      user.metrics = user.metrics
+        .sort((a,b)=> a.year -b.year)
+      user.metrics.map(metrics => metrics.percent = metrics.percent * 100)
       return {...state,  user, selected} 
     case 'LOADING_USER_PROFILE_FAILED':
       return {...state,  error:action.data} 
