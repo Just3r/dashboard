@@ -5,14 +5,19 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Lucida;
+  font-family: Lucida, Arial, Helvetica, sans-serif;
   font-size: 14px; }
 
-#application {
-  height: 100vh;
+.app-container {
   display: flex;
   align-items: stretch;
   justify-content: center; }
+
+html, body, .app-container {
+  min-height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column; }
 
 .main {
   display: flex;
@@ -179,7 +184,7 @@ body {
           align-items: center;
           width: 80%;
           height: 50%; }
-  .main footer .footer {
+  .main .footer {
     display: flex;
     flex: 1;
     width: 100%;
@@ -187,40 +192,40 @@ body {
     background-color: #5f6062;
     color: #FFFFFF;
     box-sizing: border-box; }
-    .main footer .footer__links {
+    .main .footer__links {
       display: flex; }
-    .main footer .footer__links-item {
+    .main .footer__links-item {
       display: flex;
       flex-direction: column;
       margin-right: 1.5em; }
-      .main footer .footer__links-item .items-header {
+      .main .footer__links-item .items-header {
         margin: .25em 0;
         text-transform: uppercase; }
-      .main footer .footer__links-item .items-list {
+      .main .footer__links-item .items-list {
         list-style: none;
         padding: 0;
         margin: 0; }
-        .main footer .footer__links-item .items-list .item {
+        .main .footer__links-item .items-list .item {
           padding: .25em 0; }
-          .main footer .footer__links-item .items-list .item a {
+          .main .footer__links-item .items-list .item a {
             text-decoration: none;
             color: #FFF; }
-      .main footer .footer__links-item .social-icons {
+      .main .footer__links-item .social-icons {
         display: flex;
         flex: 1;
         align-items: flex-end; }
-        .main footer .footer__links-item .social-icons .icon {
+        .main .footer__links-item .social-icons .icon {
           width: 30px;
           height: 30px;
           margin: 0 .2em; }
-    .main footer .footer__legal {
+    .main .footer__legal {
       display: flex;
       flex-direction: column;
       flex: 1;
       justify-content: flex-end;
       align-items: flex-end;
       padding-bottom: 1em; }
-    .main footer .footer__legal-item .item-text {
+    .main .footer__legal-item .item-text {
       margin: .25em 0;
       font-size: .8em; }
 

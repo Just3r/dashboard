@@ -3,17 +3,23 @@
   font-family: Lucida
   src: url('../../fonts/Lucida_Grande.ttf')
 
+
 body 
   margin: 0
   padding: 0
-  font-family: Lucida
+  font-family: Lucida, Arial, Helvetica, sans-serif
   font-size: 14px
 
-#application
-  height: 100vh
+.app-container
   display: flex
   align-items: stretch
   justify-content: center
+
+html, body, .app-container
+  min-height: 100%
+  display: flex
+  flex: 1
+  flex-direction: column
 .main
   display: flex
   flex-direction: column
@@ -179,52 +185,51 @@ body
           align-items: center
           width: 80%
           height: 50%
-  footer
-    .footer
+  .footer
+    display: flex
+    flex: 1
+    width: 100%
+    padding: 2em
+    background-color: #5f6062
+    color: #FFFFFF
+    box-sizing: border-box
+    &__links
       display: flex
-      flex: 1
-      width: 100%
-      padding: 2em
-      background-color: #5f6062
-      color: #FFFFFF
-      box-sizing: border-box
-      &__links
+    &__links-item
+      display: flex
+      flex-direction: column
+      margin-right: 1.5em
+      .items-header
+        margin: .25em 0
+        text-transform: uppercase
+      .items-list
+        list-style: none
+        padding: 0
+        margin: 0
+        .item
+          padding: .25em 0
+          a
+            text-decoration: none
+            color: #FFF
+      .social-icons
         display: flex
-      &__links-item
-        display: flex
-        flex-direction: column
-        margin-right: 1.5em
-        .items-header
-          margin: .25em 0
-          text-transform: uppercase
-        .items-list
-          list-style: none
-          padding: 0
-          margin: 0
-          .item
-            padding: .25em 0
-            a
-              text-decoration: none
-              color: #FFF
-        .social-icons
-          display: flex
-          flex: 1
-          align-items: flex-end
-          .icon
-            width: 30px
-            height: 30px
-            margin: 0 .2em
-      &__legal
-        display: flex
-        flex-direction: column
         flex: 1
-        justify-content: flex-end
         align-items: flex-end
-        padding-bottom: 1em
-      &__legal-item
-        .item-text
-          margin: .25em 0
-          font-size: .8em
+        .icon
+          width: 30px
+          height: 30px
+          margin: 0 .2em
+    &__legal
+      display: flex
+      flex-direction: column
+      flex: 1
+      justify-content: flex-end
+      align-items: flex-end
+      padding-bottom: 1em
+    &__legal-item
+      .item-text
+        margin: .25em 0
+        font-size: .8em
 
 .plug-container
   display: flex

@@ -32,7 +32,7 @@ class PieChartItem extends Component {
               cx="50%" 
               cy="50%" 
               startAngle={90}
-              endAngle={data && data[0] && `${-((data[0][name] * 100 * 3.6)-90)}`}
+              endAngle={data && data[0] && +(`${-((data[0][name] * 100 * 3.6)-90)}`)}
               innerRadius="60%"
               outerRadius="80%"
               fill={colors.chart}

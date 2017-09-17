@@ -1,8 +1,8 @@
 import React, {Component } from 'react';
 import Footer from './Footer';
 import SideBar from './SideBar';
-import SideBarProfile from './SideBarProfile'
-import '../assets/styles/css/App.css'
+import SideBarProfile from './SideBarProfile';
+import '../assets/styles/css/App.css';
 class Main extends Component {
   componentWillMount(){
     this.props.loadUserData()
@@ -27,9 +27,7 @@ class Main extends Component {
             {React.cloneElement({...this.props}.children, {...this.props})}
           </section>
         </div>
-        <footer>
-            <Footer/>
-        </footer>
+        <Footer/>
       </div>
     )
   }

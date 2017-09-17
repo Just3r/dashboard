@@ -13,7 +13,7 @@ class Footer extends Component {
     }
     const headers = Object.keys(links)
     return (
-     <div  className="footer">
+     <footer  className="footer">
         <div className="footer__links">
           {headers.map((link,index) => 
             <div className="footer__links-item" key={link}>
@@ -35,7 +35,7 @@ class Footer extends Component {
                 </div>)
               }
         </div>
-     </div>
+     </footer>
     )
   }
 };
