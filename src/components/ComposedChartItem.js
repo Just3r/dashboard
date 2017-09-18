@@ -7,8 +7,7 @@ class ComposedChartItem extends Component {
     return false
   }
   render() {
-    const { data } = this.props;
-    const { selectMetricsYear } = this.props
+    const { data, selectMetricsYear } = this.props;
     const areaLabel = (e) => {
       let mappedValue = (data && data[e.index]) || {}
       return mappedValue && <text  x={e.x-10} y={e.y} dy={-20} fill={mappedValue.grow_units < 0 ? "#f36c27":"#2dc0d2"}>{`${mappedValue.grow_units}%`}</text>

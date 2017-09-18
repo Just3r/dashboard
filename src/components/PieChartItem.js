@@ -6,10 +6,7 @@ class PieChartItem extends Component {
     return false
   }
   render() {
-    const { data } = this.props.chart;
-    const { colors } = this.props.chart;
-    const { name } = this.props.chart;
-    const { chartsColors } = this.props.chart;
+    const { data, colors, name, chartsColors } = this.props.chart;
     const pieLabel = (input) =>  `${input* 100}%`;
     const calcDegree = (input) => -((input * 100 * 3.6)-90)
     return (

@@ -7,8 +7,7 @@ class BarChartItem extends Component {
     return false
   }
   render() {
-    const { data } = this.props;
-    const { selectMetricsYear } = this.props;
+    const { data, selectMetricsYear } = this.props;
     const labelBuilder = () => <text y={10} x={10} fill="#a3a5a8">percent</text>;
     return (
       <ResponsiveContainer>

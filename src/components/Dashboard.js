@@ -5,10 +5,8 @@ import ComposedChartItem from './ComposedChartItem';
 import { chartsColors } from '../helpers/index';
 class Dashboard extends Component {
   render() {
-    const {user} = this.props.profile
-    const {selectMetricsYear} = this.props
-    const {selected} = this.props.profile
-    const {location} =this.props
+    const {user, selected} = this.props.profile
+    const {selectMetricsYear, location} = this.props
 
     return (
       <div className="dashboard" >
