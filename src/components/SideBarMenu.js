@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import {menuLinks, billAction} from '../helpers/links';
+import {menuLinks, billCreation} from '../helpers/index';
 import arrow from '../assets/icons/arrow.svg';
 import plusIcon from '../assets/icons/plus.svg';
 import dashboard from '../assets/icons/dashboard.svg';
 import produkte from '../assets/icons/produkte.svg';
 import kunden from '../assets/icons/kunden.svg';
 import rechnungen from '../assets/icons/rechnungen.svg';
-console.log(menuLinks)
 class SideBarMenu extends Component {
   render() {
     const iconsObject = {
@@ -21,7 +20,7 @@ class SideBarMenu extends Component {
       <nav className="nav">
         <Link className="nav__item-action" to="/dashboard"> 
             <img className="icon" src={plusIcon} alt={plusIcon}/>
-            <span>{billAction}</span>
+            <span>{billCreation}</span>
             <img className="icon" src={arrow} alt={arrow}/>
           </Link>
         {

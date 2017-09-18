@@ -1,0 +1,31 @@
+.card
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: stretch
+  box-sizing: border-box
+  flex: 1
+  background-color: #35bfb5
+  color: #FFF
+  padding: 1em 1.5em
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: .5em 0 
+    text-transform: uppercase
+    &:first-child
+      flex-direction: column
+      align-items: flex-start
+  &__row-value
+    flex: 1
+    justify-content: center
+    align-items: center
+    display: flex
+    font-weight: bold
+    &.saldo
+      font-size: 1.5em
+  &__row-key
+    flex: 1
+    &.saldo
+      margin-bottom: 1em

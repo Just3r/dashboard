@@ -1,14 +1,14 @@
 import React, {Component } from 'react';
 import Footer from './Footer';
 import SideBar from './SideBar';
-import '../assets/styles/css/App.css';
+import '../assets/styles/css/style.css';
 class Main extends Component {
   componentWillMount(){
-    this.props.loadUserData()
+    this.props.loadUserData();
   }
   render() {
-    const {user} = this.props.profile
-    const {location} =this.props
+    const {user} = this.props.profile;
+    const {location} =this.props;
 
     return (
       <div className="main">
@@ -17,7 +17,7 @@ class Main extends Component {
           <section className="content">
             {React.cloneElement({...this.props}.children, {...this.props})}
           </section>
-       </div>
+        </div>
         <Footer/>
       </div>
     )

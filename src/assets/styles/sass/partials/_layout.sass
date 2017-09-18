@@ -1,0 +1,51 @@
+@font-face
+  font-family: Lucida
+  src: url('../../fonts/Lucida_Grande.ttf')
+
+body 
+  margin: 0
+  padding: 0
+  font-family: Lucida, Arial, Helvetica, sans-serif
+  font-size: 14px
+
+
+html, body, .app-container
+  min-height: 100%
+  display: flex
+  flex: 1
+
+.app-container
+  flex-direction: row
+  align-items: stretch
+  justify-content: center
+.main
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  flex: 1
+  .layout
+    display: flex
+    align-items: stretch
+    flex: 4
+  .content
+    display: flex
+    flex: 1
+.header
+    display: flex
+    align-items: stretch
+    justify-content: center
+    min-height: 160px
+    &-title
+      display: flex
+      justify-content: flex-end
+      align-items: flex-end
+      font-size: 3em
+      text-transform: uppercase
+      flex: 1
+      padding: 0 1em 1em 0
+      margin: 0
+.sidebar
+  background-color: #818285
+  color: #FFFFFF
+
+

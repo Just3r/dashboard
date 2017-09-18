@@ -22,8 +22,8 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
-    "build-css": "node-sass-chokidar src/assets/styles/sass -o src/assets/styles/css",
-    "watch-css": "npm run build-css && node-sass-chokidar src/assets/styles/sass -o src/assets/styles/css --watch --recursive",
+    "build-css": "node-sass-chokidar src/assets/styles/sass/*.sass -o src/assets/styles/css",
+    "watch-css": "npm run build-css && node-sass-chokidar src/assets/styles/sass/*.sass -o src/assets/styles/css --watch --recursive",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

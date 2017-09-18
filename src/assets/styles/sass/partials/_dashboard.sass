@@ -1,0 +1,39 @@
+.dashboard
+  display: flex
+  flex: 1
+  flex-direction: column
+  &__saldo
+    display: flex
+    padding: 1.5em 2em
+    background-color: #e7e7e8
+    max-height: 62px
+    box-sizing: border-box
+    flex: 1
+    align-items: center
+    &-item
+      display: flex
+      align-items: center
+      .item-key
+        text-transform: uppercase
+        margin-right: 0.5em
+      .item-value
+        font-size: 1.5em
+        font-weight: bold
+  &__metrics
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex: 2
+    padding: 2em
+    &-piecharts
+      display: flex
+      text
+        font-size: 2em
+    &-areachart, &-piecharts, &-barchart
+      display: flex
+      flex: 1
+      justify-content: center
+      align-items: center
+      width: 80%
+      height: 100%

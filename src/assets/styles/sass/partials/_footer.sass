@@ -1,0 +1,47 @@
+.footer
+  display: flex
+  flex: 1
+  width: 100%
+  padding: 2em
+  background-color: #5f6062
+  color: #FFFFFF
+  box-sizing: border-box
+  &__links
+    display: flex
+  &__links-item
+    display: flex
+    flex-direction: column
+    margin-right: 1.5em
+    .items-header
+      margin: .25em 0
+      text-transform: uppercase
+    .item
+      padding: .25em 0
+      text-decoration: none
+      color: #FFF
+      opacity: 0.9
+      &:hover
+        opacity: 1
+        transition: .3s
+    .social-icons
+      display: flex
+      flex: 1
+      align-items: flex-end
+      .icon
+        width: 30px
+        height: 30px
+        margin: 0 .2em
+        opacity: 0.8
+        &:hover
+          opacity: 1
+  &__legal
+    display: flex
+    flex-direction: column
+    flex: 1
+    justify-content: flex-end
+    align-items: flex-end
+    padding-bottom: 1em
+  &__legal-item
+    .item-text
+      margin: .25em 0
+      font-size: .8em
