@@ -31,21 +31,6 @@ html, body, .app-container {
     display: flex;
     flex: 1; }
 
-.header {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  min-height: 160px; }
-  .header-title {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    font-size: 3em;
-    text-transform: uppercase;
-    flex: 1;
-    padding: 0 1em 1em 0;
-    margin: 0; }
-
 .sidebar {
   background-color: #818285;
   color: #FFFFFF; }
@@ -137,6 +122,21 @@ html, body, .app-container {
       width: 80%;
       height: 100%; }
 
+.header {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 140px; }
+  .header-title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    flex: 1;
+    padding: 0 1em 1em 0;
+    margin: 0; }
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -186,13 +186,13 @@ html, body, .app-container {
   color: #FFFFFF;
   box-sizing: border-box;
   padding: 1.5em;
-  min-height: 160px; }
+  min-height: 140px; }
   .profile__person {
     display: flex;
     margin-bottom: .5em; }
     .profile__person-image {
-      width: 75px;
-      height: 75px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%; }
   .profile__info {
     display: flex;
